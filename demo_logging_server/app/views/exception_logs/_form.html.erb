@@ -1,0 +1,41 @@
+<%= form_for(@exception_log) do |f| %>
+  <% if @exception_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exception_log.errors.count, "error") %> prohibited this exception_log from being saved:</h2>
+
+      <ul>
+      <% @exception_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :URL %><br />
+    <%= f.text_field :URL %>
+  </div>
+  <div class="field">
+    <%= f.label :Message %><br />
+    <%= f.text_field :Message %>
+  </div>
+  <div class="field">
+    <%= f.label :Parameters %><br />
+    <%= f.text_field :Parameters %>
+  </div>
+  <div class="field">
+    <%= f.label :backtrace %><br />
+    <%= f.text_field :backtrace %>
+  </div>
+  <div class="field">
+    <%= f.label :count %><br />
+    <%= f.number_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :time_stamp %><br />
+    <%= f.datetime_select :time_stamp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

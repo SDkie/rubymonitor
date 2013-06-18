@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  URL: MyString
+  Message: MyString
+  Parameters: MyString
+  backtrace: MyString
+  count: 1
+  time_stamp: 2013-06-18 06:12:05
+
+two:
+  URL: MyString
+  Message: MyString
+  Parameters: MyString
+  backtrace: MyString
+  count: 1
+  time_stamp: 2013-06-18 06:12:05

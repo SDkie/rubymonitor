@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @exception_log.URL %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @exception_log.Message %>
+</p>
+
+<p>
+  <b>Parameters:</b>
+  <%= @exception_log.Parameters %>
+</p>
+
+<p>
+  <b>Backtrace:</b>
+  <%= @exception_log.backtrace %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @exception_log.count %>
+</p>
+
+<p>
+  <b>Time stamp:</b>
+  <%= @exception_log.time_stamp %>
+</p>
+
+
+<%= link_to 'Edit', edit_exception_log_path(@exception_log) %> |
+<%= link_to 'Back', exception_logs_path %>

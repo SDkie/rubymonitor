@@ -1,0 +1,33 @@
+<h1>Listing exception_logs</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Message</th>
+    <th>Parameters</th>
+    <th>Backtrace</th>
+    <th>Count</th>
+    <th>Time stamp</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exception_logs.each do |exception_log| %>
+  <tr>
+    <td><%= exception_log.URL %></td>
+    <td><%= exception_log.Message %></td>
+    <td><%= exception_log.Parameters %></td>
+    <td><%= exception_log.backtrace %></td>
+    <td><%= exception_log.count %></td>
+    <td><%= exception_log.time_stamp %></td>
+    <td><%= link_to 'Show', exception_log %></td>
+    <td><%= link_to 'Edit', edit_exception_log_path(exception_log) %></td>
+    <td><%= link_to 'Destroy', exception_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exception log', new_exception_log_path %>
