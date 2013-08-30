@@ -1,11 +1,19 @@
-rubymonitor_gem:
-   Is a gem which provides facility to monitor unhandled exceptions in Ruby on Rails
+Installation:
 
-demo_ROR_application:
-   Is demo application to test above gem
+add to Gemfile of ROR application:
 
-demo_logging_server:
-   Is demo logging server which logs the unhandled exceptions 
+      gem 'rubymonitor'
 
+Install Gem:
 
+      gem install rubymonitor-0.0.1.gem
 
+add to config/environments/production.rb:
+
+      config.middleware.use Rubymonitor,
+      :URL => "server URL"
+      
+example:
+
+      config.middleware.use Rubymonitor,
+      :URL => "http://0.0.0.0:2000/exception_logs"
